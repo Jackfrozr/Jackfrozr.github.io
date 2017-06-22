@@ -1,0 +1,73 @@
+.jumbotron{
+  background: -webkit-linear-gradient(left top,#E9F7FD, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right,#E9F7FD, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right,#E9F7FD, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right,#E9F7FD, white); /* Standard syntax */
+  margin-bottom: 0px;
+}
+.jumbotron h1{
+  display: table;
+  margin: 0 auto;
+  background: linear-gradient(120deg, green 0%, orange 15%, pink 25%, lightblue 35%, grey 45%, red 55%, purple 65%, yellow 75%, teal 85%, blue 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.jumbotron p{
+  color: grey;
+}
+body{
+  background-color: white;
+}
+
+/*Navbar*/
+.navbar-custom {
+  background-color: black;
+  border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+  color: lightblue;
+  font-size: 19px;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+  color: violet;
+  background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+  color: violet;
+  background-color: black;
+}
+
+.navbar-custom .navbar-brand {
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#fff;
+}
+
+.content{
+  margin-top: 50px;
+  padding-left: 50px;
+    padding-right: 50px;
+}
+
+h1{
+  color: grey;
+}
+
+footer{
+  margin-top: 40px;
+  background-color: #E9F7FD;
+  min-height: 50px;
+  padding-top: 15px;
+  font-weight: bold;
+  color: grey;
+}
