@@ -65,6 +65,7 @@ h1{
 
 h3{
   color:grey;
+  font-size: 15px;
 }
 
 footer{
@@ -78,4 +79,8 @@ footer{
 
 video{
   height: 500px;
+}
+
+.text-body{
+  padding: 25px;
 }
