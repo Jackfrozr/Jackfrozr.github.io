@@ -63,6 +63,10 @@ h1{
   color: grey;
 }
 
+h3{
+  color:grey;
+}
+
 footer{
   margin-top: 40px;
   background-color: #E9F7FD;
@@ -70,4 +74,8 @@ footer{
   padding-top: 15px;
   font-weight: bold;
   color: grey;
+}
+
+video{
+  height: 500px;
 }
