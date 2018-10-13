@@ -77,10 +77,11 @@ footer{
   color: grey;
 }
 
-video{
-  height: 500px;
-}
-
 .text-body{
   padding: 25px;
+}
+
+iframe{
+  margin-left: 0;
+  padding: 0;
 }
