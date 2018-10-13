@@ -300,6 +300,7 @@ text-align: left;
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 600px) {
@@ -314,7 +315,7 @@ text-align: left;
 
     .darkhang
     {
-        background-position: -770px -250px;
+        background-position: -700px -250px;
     }
 
     .cover-container
