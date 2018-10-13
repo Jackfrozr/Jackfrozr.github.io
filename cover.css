@@ -123,7 +123,9 @@ body {
 {
   margin-top: 150px;
 }
-
+@media only screen and (max-width: 600px) {
+  .cover-heading{margin-top: 40px;}
+}
 /*
  * Footer
  */
@@ -272,11 +274,17 @@ background-color: transparent;
 
 .marginbot{margin-bottom: 280px;}
 
+
 .description-box{
   padding:25px;
   margin-top: 25px;
   font-size: 20px;
+}
 
+
+.appfeaturespacing
+{
+  margin-top: 40px;
 }
 
 li{font-size: 15px; text-align: left;}
@@ -291,5 +299,27 @@ text-align: left;
   background-image: url(image/background.jpg);
   background-size: cover;
   background-position: bottom;
-      background-attachment: fixed;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 600px) {
+    .marginbot {
+        margin-bottom: 50px;
+    }
+
+    .appfeaturespacing
+    {
+      margin-top: 0px;
+    }
+
+    .darkhang
+    {
+        background-position: -770px -250px;
+    }
+
+    .cover-container
+    {padding: 10px;}
+
+    .btn-default
+    {margin: 4px;}
 }
