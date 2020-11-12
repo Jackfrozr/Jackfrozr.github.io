@@ -4,6 +4,7 @@
 
 p{font-size: 16px;}
 
+
 /* Links */
 a,
 a:focus,
@@ -35,6 +36,7 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    cursor: url('http://www.rw-designer.com/cursor-view/80021.png')20 32, auto;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -53,6 +55,11 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+}
+
+.cover-container
+{
+width: 1280px;
 }
 
 /* Padding for spacing */
@@ -140,6 +147,16 @@ body {
  * Affix and center
  */
 
+
+@media (min-width: 600px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 80%;
+  }
+}
+
+
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
@@ -158,17 +175,19 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 80%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1280px) {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 835px;
+    width: 80%;
   }
 }
+
+
 
 .tooltips {
     position: relative;
@@ -208,6 +227,124 @@ body {
     opacity: 1;
 }
 
+.fireplace
+{
+		background-position: bottom right;
+	  background-image:url("https://thumbs.gfycat.com/MindlessEvilElephant-size_restricted.gif");
+  background-repeat: no-repeat;
+  opacity: 1 !important;
+  background-attachment: fixed;
+}
+
+#splash
+{
+
+}
+.splash{
+	position: absolute;
+	text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 0%;
+	z-index: 999;
+}
+
+.fade-out {
+  animation: fadeOut ease-in-out 4s;
+  -webkit-animation: fadeOut ease-in-out 4s;
+  -moz-animation: fadeOut ease-in-out 4s;
+  -o-animation: fadeOut ease-in-out 4s;
+  -ms-animation: fadeOut ease-in-out 4s;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  70% {opacity:0.3;}
+  80% {opacity:0.5;}
+  90% {opacity:0.8;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  70% {opacity:0.3;}
+  80% {opacity:0.5;}
+  90% {opacity:0.8;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  70% {opacity:0.3;}
+  80% {opacity:0.5;}
+  90% {opacity:0.8;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  70% {opacity:0.3;}
+  80% {opacity:0.5;}
+  90% {opacity:0.8;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  70% {opacity:0.3;}
+  80% {opacity:0.5;}
+  90% {opacity:0.8;}
+  100% {opacity:1;}
+}
+
 .nobox
 {
 border: none;
@@ -218,18 +355,26 @@ background-color: transparent;
 {
 
   margin:0;
+  margin-left: 0px;
+    margin-right: 10px;
   padding:0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 27px;
   border: 0;
   border-left: 2px solid #777777;
   border-top: 2px solid #777777;
+  width: 100%;
+  min-height: 250px;
+  border-radius:5px;
+  opacity: 0.9;
+	
 }
 
 .auckland-bg
 {
-  background: url(image/Screenshot_24.png);
-    background-position: top;
+  background: url(image/Screenshot_24.png) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .mg-bg
@@ -240,7 +385,9 @@ background-color: transparent;
 
 .darkman-bg
 {
-  background: url(image/background.jpg);
+  background: url(image/background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hats-bg
@@ -251,10 +398,17 @@ background-color: transparent;
 .mask
 {
     padding:25px;
-    padding-left: 50px;
-    padding-right: 50px;
-  background-color: rgba(0,0,0,0.7);
-    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(25,25,25,0.8);
+    border-radius: 5px;
+	height: 100%;
+	    transition: 0.3s;
+}
+
+.mask:hover
+{
+    background-color: rgba(25,25,25,0.3);
 }
 
 .btn-default:hover
@@ -270,8 +424,10 @@ background-color: transparent;
 
 .lgrey
 {
-  color: rgb(215,0,0);
+  color: rgb(255,0,0);
     text-shadow: 2px 2px 4px #000000;
+	font-size: 25px;
+	font-weight: bold;
 }
 
 .marginbot{margin-bottom: 280px;}
@@ -329,3 +485,4 @@ text-align: left;
     .btn-default
     {margin: 4px;}
 }
+
