@@ -266,7 +266,7 @@ width: 1280px;
   100% {opacity:0; display:none}
 }
 
-@-moz-keyframes fadeIn {
+@-moz-keyframes fadeOut {
   0% {opacity:1;}
   50% {opacity:0.8;}
   80% {opacity:0.5;}
@@ -274,7 +274,7 @@ width: 1280px;
   100% {opacity:0; display:none}
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeOut {
   0% {opacity:1;}
   50% {opacity:0.8;}
   80% {opacity:0.5;}
@@ -282,7 +282,7 @@ width: 1280px;
   100% {opacity:0; display:none}
 }
 
-@-o-keyframes fadeIn {
+@-o-keyframes fadeOut {
   0% {opacity:1;}
   50% {opacity:0.8;}
   80% {opacity:0.5;}
@@ -290,7 +290,7 @@ width: 1280px;
   100% {opacity:0; display:none}
 }
 
-@-ms-keyframes fadeIn {
+@-ms-keyframes fadeOut {
   0% {opacity:1;}
   50% {opacity:0.8;}
   80% {opacity:0.5;}
