@@ -221,7 +221,9 @@ background-color: transparent;
   padding:0;
   margin-bottom: 20px;
   border-radius: 27px;
-  border: 1px solid #777;
+  border: 0;
+  border-left: 2px solid #777777;
+  border-top: 2px solid #777777;
 }
 
 .auckland-bg
