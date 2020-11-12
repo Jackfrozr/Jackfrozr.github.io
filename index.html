@@ -8,17 +8,40 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Jantzen's Github Page</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Jantzen's Profile</title>
+ <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="cover.css" rel="stylesheet">
+  <script>
+	var quotes = [
+	  "Don't fear failure...in great attempts it is glorious even to fail. - Bruce Lee",
+	  '"Choose thy fate alone. Seize it with thine own hands. All the more, should thy fate entail such foul betrayal." - Ludleth of Courland',
+	];
+    function randomQuotes() {
+      var random = Math.floor(Math.random() * 2);
+	  
+	  document.getElementById("splash").innerHTML = quotes[random];
+    }
+   </script>
+
   </head>
 
-  <body>
 
-    <div class="site-wrapper">
+  <body onload="randomQuotes()">
+
+
+
+    <div class="splash h1 fade-out ">
+
+	<h3 id="splash"></p>
+	</div>
+    <div class="site-wrapper fade-in fireplace">
 
       <div class="site-wrapper-inner">
 
@@ -37,10 +60,11 @@
             </div>
           </div>
 
-            <h1 class="cover-heading grey">PROJECT SHOWCASE</h1></br>
 
+            <h1 class="cover-heading grey">PROJECT SHOWCASE</h1></br>
+          <div class="content">
           <div class="row">
-          <div class="inner cover darkman-bg bigbutton col-sm">
+          <div class="inner cover darkman-bg bigbutton col">
             <div class="mask">
             <h2 class="lead lgrey">Dark Hangman</h2>
               <p>A hangman app made for android mobile phones using android studio for mobile software development course final project at Unitec.</p>
@@ -49,8 +73,9 @@
               <a href="https://github.com/Jackfrozr/DarkHangman" class="btn btn-lg btn-default">View Code</a>
             </div>
           </div>
-
-          <div class="inner cover mg-bg bigbutton col-sm">
+		  </div>
+          <div class="row">
+          <div class="inner cover mg-bg bigbutton col">
             <div class="mask">
             <h2 class="lead lgrey">Megaweb Gaming</h2>
               <p>Website made for Megaweb Gaming using wordpress and woocommerce, my work include the creation of the website, design and implementation of an event registration and custom checkout system
@@ -60,7 +85,7 @@
               </div>
           </div>
 
-          <div class="inner cover hats-bg bigbutton col-sm">
+          <div class="inner cover hats-bg bigbutton col">
             <div class="mask">
             <h2 class="lead lgrey">Quality Hats</h2>
               <p>Website made with visual studio 2015 using asp.net core for a school project</p>
@@ -70,7 +95,9 @@
             </div>
           </div>
 
-          <div class="inner cover auckland-bg bigbutton col-sm">
+		  </div>
+		  <div class="row">
+		            <div class="inner cover auckland-bg bigbutton col">
             <div class="mask">
             <h2 class="lead lgrey">Auckland Books</h2>
               <p>A website made for a group school project, i am responsible for 70~80% of the coding mainly HTML, JSON and JavaScript.</p>
@@ -79,7 +106,9 @@
               <a href="https://github.com/Jackfrozr/AucklandBooks" class="btn btn-lg btn-default">View Code</a>
             </div>
           </div>
-
+		  </div>
+		  </div>
+		 
 
           <p class="marginbot"></p>
           <div class="mastfoot">
