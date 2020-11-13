@@ -28,6 +28,11 @@
 	  
 	  document.getElementById("splash").innerHTML = quotes[random];
     }
+	
+	$('a[data-toggle=modal][data-target]').click(function () {
+    var target = $(this).attr('href');
+    $('a[data-toggle=tab][href=' + target + ']').tab('show');
+})
    </script>
 
   </head>
@@ -39,7 +44,7 @@
 
     <div class="splash h1 fade-out ">
 
-	<h3 id="splash">HELLO WANDERER</p>
+	<h4 id="splash">Welcome Lost Traveler.</p>
 	</div>
     <div class="site-wrapper fade-in fireplace">
 
@@ -60,8 +65,123 @@
             </div>
           </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content darkmodal">
+      <div class="modal-header darkmodalheader">
+        <h4 class="modal-title" id="exampleModalCenterTitle">Profile</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body darkmodalcontent">
+	  <table class="darktable" style="text-align:left; margin-left:25px">
+	  <tr>
+	    <td>USERNAME  </td><td> : </td><td> JANTZEN</td>
+	  </tr>
+	  <tr>
+		<td>NATIONALITY  </td><td> : </td><td> INDONESIA</td>
+	  </tr>
+	  <tr>
+		<td>CLASS  </td><td> : </td><td> SOFTWARE/APP/WEB DEVELOPER</td>
+	  </tr>
+		</table>
+        <h4>Linguistic Skills</h4><div class="divider"></div>
+		<div class="row">
+		<div class="col-sm-3">
+		<p class="darkmodaltext">English</p>
+		</div>
+		<div class="col-sm"> 
+		<span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
+		</div>
+		<div class="col-sm-3"> 
+		<p class="darkmodaltext">Japanese </p>
+		</div>
+		<div class="col-sm">  
+		<span class="dot"></span><span class="dot"></span>
+		</div>
+      </div>
+		<div class="row">
+		<div class="col-sm-3">
+		<p class="darkmodaltext">Bahasa Indonesia</p>
+		</div>
+				<div class="col-sm">
+		<span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
+		</div>
+				<div class="col-sm-3">
+		<p class="darkmodaltext">Chinese</p>
+		</div>
+				<div class="col-sm"><span class="dot"></span><span class="dot"></span></p></div>
+        </div>
+			<h4>Professional Skill</h4><div class="divider"></div>
+			<div class="skilltree">
+            <div class="row">
+			            <div class="col">
 
-            <h1 class="cover-heading grey">PROJECT SHOWCASE</h1></br>
+<table class="table darktable">
+  <thead>
+    <tr>
+      <th scope="col-2">General</th>
+      <th scope="col">Web Programming</th>
+      <th scope="col">Databases</th>
+      <th scope="col">Others</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PYTHON, RUBY, Java, C#, C++</td>
+      <td>HTML, CSS, JS, JQUERY, ASP.NET, PHP, WORDPRESS, WooCommerce and OpenCart</td>
+      <td>ELASTIC, SQL, VERTICA, MYSQL, MARIADB, SQLITE, MSSQL</td>
+      <td>Kibana, Logstash, The Hive</td>
+    </tr>
+  </tbody>
+</table>
+
+			</div>
+			</div>		
+			</div>
+		</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-toggle="#exampleModalCenter2">Next Page</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="0" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content darkmodal">
+      <div class="modal-header darkmodalheader">
+        <h4 class="modal-title" id="exampleModalCenterTitle">Profile</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body darkmodalcontent">
+	
+			</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+			          <div class="content">
+            <h1 class="cover-heading grey">Why art thou here?</h1></br>
+			<div class="project-showcase">
+		     <p data-toggle="modal" data-target="#exampleModalCenter">Profile </p>
+			 <p>Projects</p>
+			 <p>Code Repositories</p>
+			 <p>Contact</p>
+			</div>
+		  </div>
+		<!--	
           <div class="content">
           <div class="row">
           <div class="inner cover darkman-bg bigbutton col">
@@ -108,7 +228,7 @@
           </div>
 		  </div>
 		  </div>
-		 
+		 -->
 
           <p class="marginbot"></p>
           <div class="mastfoot">
