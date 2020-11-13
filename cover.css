@@ -30,7 +30,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #111;
+  background-color: rgb(16,14,16);
 }
 
 .modal {
