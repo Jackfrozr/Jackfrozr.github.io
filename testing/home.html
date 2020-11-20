@@ -166,9 +166,11 @@ function getRandomInt(max) {
 
 
         $.myjQuery = function(id) {
-		$(id).css("display","none");
-             $(id).fadeIn(2000).css("display","block");
-         };
+			$(id).css("display","none");
+			$(id).fadeIn(1500).css("display","block");
+			var rand = Math.floor(Math.random() * CSS_COLOR_NAMES.length);
+		    $("#btn-no").css("background",CSS_COLOR_NAMES[rand]);
+		};
 		 
 		$.randcolor = function(id) {
 		$(id).css("display","none");
@@ -180,8 +182,11 @@ function getRandomInt(max) {
 		 
 function press(element) {
   var elem = document.getElementById("btn-no");   
-  elem.style.top = (Math.random()*55)+"%" ;
-  elem.style.left = (Math.random()*50)+"%"; 
+  var height = $(window).height() -200;
+  var width = $(window).width() -250;
+   $.myjQuery("#btn-no");
+  elem.style.top = getRandomInt(height)+"px" ;
+  elem.style.left = getRandomInt(width)+"px"; 
   var elem2 = document.getElementById("emoticon");   
 
   var text = ["(?_?)","(－‸ლ)",":(", ">:(", "(T_T)","(._.)","(＾▽＾)","=^_^=","(Ｔ▽Ｔ)","(=_=)","(╯°□°）╯︵ ┻━┻","(╯°□°）╯︵ ┻━┻","(°-°) (°.°)"];
@@ -234,7 +239,7 @@ h1{
 
 button
 {
-background: pink;
+background: transparent;
 color: black;
 font-weight:bold;
 bordeR: 0;
@@ -242,13 +247,16 @@ bordeR: 0;
 
 .btn-yes
 {
-
+margin-top: 15px;
+background: pink;
 position: absolute;
 margin-left: 10px;
 }
 
 .btn-no
 {
+margin-top: 15px;
+background: pink;
 position: absolute;
 margin-left: 180px;
 }
@@ -257,7 +265,6 @@ button
 {
 min-width: 150px;
 padding: 10px;	
-margin-top: 15px;
 }
 
 #roses
@@ -364,7 +371,7 @@ margin: auto;
     </button>
   </div>
 
-  <div class="btn-no row" id="btn-no">
+  <div class="btn-no" id="btn-no">
     <button onmouseover="press(this)"> 
       <span>No</span>
     </button>
