@@ -1,0 +1,376 @@
+<head>
+  <title>Choose Wisely</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<script type="text/javascript">
+// https://gist.github.com/bobspace/2712980
+const CSS_COLOR_NAMES = [
+  "AliceBlue",
+  "AntiqueWhite",
+  "Aqua",
+  "Aquamarine",
+  "Azure",
+  "Beige",
+  "Bisque",
+  "Black",
+  "BlanchedAlmond",
+  "Blue",
+  "BlueViolet",
+  "Brown",
+  "BurlyWood",
+  "CadetBlue",
+  "Chartreuse",
+  "Chocolate",
+  "Coral",
+  "CornflowerBlue",
+  "Cornsilk",
+  "Crimson",
+  "Cyan",
+  "DarkBlue",
+  "DarkCyan",
+  "DarkGoldenRod",
+  "DarkGray",
+  "DarkGrey",
+  "DarkGreen",
+  "DarkKhaki",
+  "DarkMagenta",
+  "DarkOliveGreen",
+  "DarkOrange",
+  "DarkOrchid",
+  "DarkRed",
+  "DarkSalmon",
+  "DarkSeaGreen",
+  "DarkSlateBlue",
+  "DarkSlateGray",
+  "DarkSlateGrey",
+  "DarkTurquoise",
+  "DarkViolet",
+  "DeepPink",
+  "DeepSkyBlue",
+  "DimGray",
+  "DimGrey",
+  "DodgerBlue",
+  "FireBrick",
+  "FloralWhite",
+  "ForestGreen",
+  "Fuchsia",
+  "Gainsboro",
+  "GhostWhite",
+  "Gold",
+  "GoldenRod",
+  "Gray",
+  "Grey",
+  "Green",
+  "GreenYellow",
+  "HoneyDew",
+  "HotPink",
+  "IndianRed",
+  "Indigo",
+  "Ivory",
+  "Khaki",
+  "Lavender",
+  "LavenderBlush",
+  "LawnGreen",
+  "LemonChiffon",
+  "LightBlue",
+  "LightCoral",
+  "LightCyan",
+  "LightGoldenRodYellow",
+  "LightGray",
+  "LightGrey",
+  "LightGreen",
+  "LightPink",
+  "LightSalmon",
+  "LightSeaGreen",
+  "LightSkyBlue",
+  "LightSlateGray",
+  "LightSlateGrey",
+  "LightSteelBlue",
+  "LightYellow",
+  "Lime",
+  "LimeGreen",
+  "Linen",
+  "Magenta",
+  "Maroon",
+  "MediumAquaMarine",
+  "MediumBlue",
+  "MediumOrchid",
+  "MediumPurple",
+  "MediumSeaGreen",
+  "MediumSlateBlue",
+  "MediumSpringGreen",
+  "MediumTurquoise",
+  "MediumVioletRed",
+  "MidnightBlue",
+  "MintCream",
+  "MistyRose",
+  "Moccasin",
+  "NavajoWhite",
+  "Navy",
+  "OldLace",
+  "Olive",
+  "OliveDrab",
+  "Orange",
+  "OrangeRed",
+  "Orchid",
+  "PaleGoldenRod",
+  "PaleGreen",
+  "PaleTurquoise",
+  "PaleVioletRed",
+  "PapayaWhip",
+  "PeachPuff",
+  "Peru",
+  "Pink",
+  "Plum",
+  "PowderBlue",
+  "Purple",
+  "RebeccaPurple",
+  "Red",
+  "RosyBrown",
+  "RoyalBlue",
+  "SaddleBrown",
+  "Salmon",
+  "SandyBrown",
+  "SeaGreen",
+  "SeaShell",
+  "Sienna",
+  "Silver",
+  "SkyBlue",
+  "SlateBlue",
+  "SlateGray",
+  "SlateGrey",
+  "Snow",
+  "SpringGreen",
+  "SteelBlue",
+  "Tan",
+  "Teal",
+  "Thistle",
+  "Tomato",
+  "Turquoise",
+  "Violet",
+  "Wheat",
+  "White",
+  "WhiteSmoke",
+  "Yellow",
+  "YellowGreen",
+];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+
+        $.myjQuery = function(id) {
+		$(id).css("display","none");
+             $(id).fadeIn(2000).css("display","block");
+         };
+		 
+		$.randcolor = function(id) {
+		$(id).css("display","none");
+             $(id).fadeIn().css("display","block");
+		var rand = Math.floor(Math.random() * CSS_COLOR_NAMES.length);
+             $(id).css("color",CSS_COLOR_NAMES[rand]);
+         };
+		 
+		 
+function press(element) {
+  var elem = document.getElementById("btn-no");   
+  elem.style.top = (Math.random()*60)+"%" ;
+  elem.style.left = (Math.random()*60)+"%"; 
+  var elem2 = document.getElementById("emoticon");   
+
+  var text = ["(?_?)","(－‸ლ)",":(", ">:(", "(T_T)","(._.)","(＾▽＾)","=^_^=","(Ｔ▽Ｔ)","(=_=)","(╯°□°）╯︵ ┻━┻","(╯°□°）╯︵ ┻━┻","(°-°) (°.°)"];
+    $.randcolor("#emoticon");
+  var rand = getRandomInt(text.length);
+  elem2.innerText = text[rand] ;     
+}
+
+function yes(element) {
+  var elem = document.getElementById("heads");   
+  var text = ["SEE YOU TOMMORROW"];
+  var rand = getRandomInt(text.length);
+  elem.innerText = text[rand] ;
+  
+  var elem2 = document.getElementById("emoticon");   
+  elem2.style.display = "none";
+  
+    $.myjQuery("#roses");
+
+  
+  var elem2 = document.getElementById("btn-yes");   
+  elem2.style.display = "none";
+    var elem2 = document.getElementById("btn-no");   
+  elem2.style.display = "none";
+  }
+</script>
+
+<style>
+
+h1#emoticon
+{
+color:cyan;
+}
+
+.container{
+  width: 400px;
+  height: 100%;
+  margin: auto;
+  padding-top: 200px;
+  padding-bottom: 100px;
+
+}
+body{  overflow: hidden;
+  background: #222;
+  color: pink}
+h1{
+ text-align: center;
+  font-size:32px;
+}
+
+button
+{
+background: pink;
+color: black;
+font-weight:bold;
+bordeR: 0;
+}
+
+.btn-yes
+{
+
+position: absolute;
+margin-left: 10px;
+}
+
+.btn-no
+{
+position: absolute;
+margin-left: 180px;
+}
+
+button
+{
+min-width: 150px;
+padding: 10px;	
+margin-top: 15px;
+}
+
+#roses
+{
+display:none;
+margin: auto;
+}
+
+.fade-out {
+  animation: fadeOut ease-in-out 4s;
+  -webkit-animation: fadeOut ease-in-out 4s;
+  -moz-animation: fadeOut ease-in-out 4s;
+  -o-animation: fadeOut ease-in-out 4s;
+  -ms-animation: fadeOut ease-in-out 4s;
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+@keyframes fadeOut {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-moz-keyframes fadeOut {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-o-keyframes fadeOut {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+@-ms-keyframes fadeOut {
+  0% {opacity:1;}
+  50% {opacity:0.8;}
+  80% {opacity:0.5;}
+  90% {opacity:0.3;}
+  100% {opacity:0; display:none}
+}
+
+.fade-in {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+</style>
+
+<div class="fade-in container col">
+  
+   <div class="col">
+  <h1 id="heads">WILL YOU GO ON A MOVIE DATE WITH ME TOMMORROW~?</h1>
+   </div>
+  <h1 id="emoticon"></h1>
+  <img id="roses" src="https://i.pinimg.com/originals/7f/2e/12/7f2e12da439cd22dce08850af928c1f0.jpg" width="300">
+  <div id="btn-yes" class="btn-yes row">
+    <button onmousedown="yes(this)">
+      <span>Yes</span>
+    </button>
+  </div>
+
+  <div class="btn-no row" id="btn-no">
+    <button onmouseover="press(this)"> 
+      <span>No</span>
+    </button>
+  </div>
+  
+</div>
+
+
+
