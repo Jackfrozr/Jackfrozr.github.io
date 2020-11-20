@@ -165,7 +165,12 @@ function getRandomInt(max) {
 }
 
 
-        $.myjQuery = function(id) {
+        $.myjQuery2 = function(id) {
+			$(id).css("display","none");
+			$(id).fadeIn(1500).css("display","block");
+		};
+	
+	        $.myjQuery = function(id) {
 			$(id).css("display","none");
 			$(id).fadeIn(1500).css("display","block");
 			var rand = Math.floor(Math.random() * CSS_COLOR_NAMES.length);
@@ -200,16 +205,12 @@ function yes(element) {
   var text = ["SEE YOU TOMMORROW"];
   var rand = getRandomInt(text.length);
   elem.innerText = text[rand] ;
-  
+  $.myjQuery2("#roses"); 
   var elem2 = document.getElementById("emoticon");   
   elem2.style.display = "none";
-  
-    $.myjQuery("#roses");
-
-  
   var elem2 = document.getElementById("btn-yes");   
   elem2.style.display = "none";
-    var elem2 = document.getElementById("btn-no");   
+  var elem2 = document.getElementById("btn-no");   
   elem2.style.display = "none";
   }
 </script>
